@@ -22,7 +22,7 @@ function Land() {
             </p>
 
             <div className="relative flex items-center gap-7 p-5 mt-[60px] justify-start">
-                <div className="w-[500px] h-[700px] overflow-hidden rounded-xl bg-gradient-to-r from-[#d8b4fe] to-[#93c5fd] p-px opacity-85 hover:cursor-pointer shadow-lg hover:shadow-lg hover:shadow-[#93c5fd] transition duration-[0.6s]" onClick={e => navigate('/chat')}>
+                <div className="w-[500px] h-[700px] md:w-[300px] md:h-[500px] overflow-hidden rounded-xl bg-gradient-to-r from-[#d8b4fe] to-[#93c5fd] p-px opacity-85 hover:cursor-pointer shadow-lg hover:shadow-lg hover:shadow-[#93c5fd] transition duration-[0.6s]" onClick={e => navigate('/chat')}>
                     <div className='w-full h-full p-10 rounded-[calc(0.75rem-1px)] bg-slate-950'>
                         <h3 className="text-[23px]"><span className="bg-gradient-to-r from-purple-300 to-blue-300 text-transparent bg-clip-text">Gemini </span>Pro</h3>
                         <p className="text-[17px]">Your Conversational Companion</p>
