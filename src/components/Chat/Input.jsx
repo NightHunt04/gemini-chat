@@ -65,7 +65,7 @@ function Input() {
                 value={prompt}
                 disabled={disabled}
                 onChange={e => setPrompt(e.target.value)}
-                className={`rounded-2xl outline-none shadow-xl w-4/12 text-gray-200 bg-slate-800 px-5 py-3 text-lg ${disabled ? 'bg-slate-500' : ''}`}
+                className={`rounded-2xl outline-none shadow-xl w-[350px] md:w-4/12 text-gray-200 bg-slate-800 px-5 py-2 md:py-3 text-[15px] md:text-lg ${disabled ? 'bg-slate-500' : ''}`}
                 onKeyDown={e => {
                     if(e.key === 'Enter')
                         handleInputPrompt()  
