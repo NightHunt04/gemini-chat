@@ -1,0 +1,68 @@
+
+.gradient-animation:nth-child(1) {
+    background-image: linear-gradient(to right, #8fd0fe, #fff, #e7c6ff);
+    background-size: 200% 100%; 
+    animation: gradient-animation 5s ease infinite;
+    transition: background-position 1s ease;
+    border-radius: 6px; 
+}
+
+.gradient-animation:nth-child(2) {
+    background-image: linear-gradient(to right, #8fd0fe, #fff, #e7c6ff);
+    background-size: 200% 100%; 
+    animation: gradient-animation 2s ease infinite;
+    transition: background-position 1s ease;
+    border-radius: 6px; 
+}
+
+.gradient-animation:nth-child(3) {
+    border: none;
+    background-color: #f6f7f8;
+    background-image: linear-gradient(to right, #8fd0fe, #fff, #e7c6ff);
+    background-size: 800px 50px; 
+    animation: gradient-animation 4s infinite linear;
+    transition: background-position 1s ease;
+    border-radius: 6px; 
+}
+
+@keyframes gradient-animation {
+    from {
+        background-position: 200% 0%;
+    }
+    to {
+        background-position: -200% 0%;
+    }
+}
+
+.bottom-up {
+    opacity: 0.6;
+    transform: translateY(60px);
+    animation: bottom-to-up 0.7s ease forwards;
+}
+
+.bottom-up-ans {
+    opacity: 0.6;
+    transform: translateY(60px);
+    animation: bottom-to-up 0.95s ease forwards;
+}
+
+@keyframes bottom-to-up {
+    from {
+        opacity: 0.6;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.code {
+    white-space: pre-line;
+    font-size: 16px;
+    background-color: rgb(7, 7, 7);
+    border-radius: 15px;
+    padding: 13px 30px;
+    width: 740px;
+}
+
