@@ -69,9 +69,9 @@ function DisplayChat() {
                                     </div>
                                     <div>
                                         <p className="relative text-gray-300 whitespace-pre-line text-[18px]">
-                                            <div className="absolute top-[10px] w-[270px] md:w-[700px] gradient-animation h-5 m-1 opacity-80"></div>
-                                            <div className="absolute top-[40px] w-[270px] md:w-[700px] gradient-animation h-5 m-1 opacity-80"></div>
-                                            <div className="absolute top-[70px] w-[220px] md:w-[400px] gradient-animation h-5 m-1 opacity-80"></div>
+                                            <div className="absolute top-[10px] w-[250px] md:w-[700px] gradient-animation h-5 m-1 opacity-80"></div>
+                                            <div className="absolute top-[40px] w-[250px] md:w-[700px] gradient-animation h-5 m-1 opacity-80"></div>
+                                            <div className="absolute top-[70px] w-[200px] md:w-[400px] gradient-animation h-5 m-1 opacity-80"></div>
                                         </p>
                                     </div>
                                 </div>
