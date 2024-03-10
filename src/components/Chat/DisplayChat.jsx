@@ -52,7 +52,7 @@ function DisplayChat() {
                                         <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" className="inline w-full h-full m-5" alt="" />
                                     </div>
                                     <div>
-                                        <p className="text-gray-300 whitespace-pre-line text-[16px]" dangerouslySetInnerHTML={{__html: message['text']}}/>
+                                        <p className="text-gray-300 whitespace-pre-line text-[16px] md:text-[18px]" dangerouslySetInnerHTML={{__html: message['text']}}/>
                                     </div>
                                     <div className="flex items-center justify-center gap-2 absolute right-0 bottom-0">
                                         <button className="absolute bg-transparent text-gray-200 text-[14px] md:text-[17px] right-0 bottom-0 p-1 hover:text-blue-200" onClick={() => stopSpeakText()}><i className="fa-solid fa-volume-xmark"></i></button>

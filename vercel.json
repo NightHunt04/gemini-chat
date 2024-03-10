@@ -9,7 +9,7 @@
         },
         {
             "src": "/api/speak",
-            "dest": "http://localhost:5000/speak"
+            "dest": "/speak_server.py"
         },
         { "src": ".*", "dest": "/index.html" }
     ]
