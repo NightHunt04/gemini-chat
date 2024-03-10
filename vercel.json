@@ -3,6 +3,14 @@
         {
             "src": "/[^.]+",
             "dest": "/" 
-        }
+        },
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/api/speak",
+            "dest": "http://localhost:5000/speak"
+        },
+        { "src": ".*", "dest": "/index.html" }
     ]
 }
