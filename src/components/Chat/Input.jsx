@@ -54,11 +54,9 @@ function Input() {
 
         let regex = /```[\s\S]*?```/g;
 
-        // Replace code blocks with corresponding content from data array
         let finalAnswer = breakAnswer.replace(regex, () => {
-            return codeStyleAnswer.shift() || '' // Shift the first element from data array or empty string if array is empty
+            return codeStyleAnswer.shift() || '' 
         })
-        // breakAnswer = breakAnswer.replace(/```(.*?)```/gs, codeStyleAnswer)
 
         const id = crypto.randomUUID()
 
