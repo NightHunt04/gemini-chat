@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useGeminiContext } from "../../context/GeminiContext"
-// import runChat from '../../utils/fetchGeminiPro.js' 
-import fetchGeminiPro from '../../utils/fetchGeminiPro.js'
+import runChat from '../../utils/fetchGeminiPro.js' 
+// import fetchGeminiPro from '../../utils/fetchGeminiPro.js'
 
 function Input() {
     const { addMessage, setMessageHistory } = useGeminiContext()
@@ -26,8 +26,8 @@ function Input() {
         
         
         addMessage('ai', 'temp', 13340)
-        // const answer = await runChat(prompt)
-        const answer = await fetchGeminiPro(prompt)
+        const answer = await runChat(prompt)
+        // const answer = await fetchGeminiPro(prompt)
         let resArray = answer.split('**')
         let boldAnswer = ''
 
