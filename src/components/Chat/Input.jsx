@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useGeminiContext } from "../../context/GeminiContext"
-import runChat from '../../utils/fetchGeminiPro.js' 
-// import fetchGeminiPro from '../../utils/fetchGeminiPro.js'
+// import runChat from '../../utils/fetchGeminiPro.js' 
+import fetchGeminiPro from '../../utils/fetchGeminiPro.js'
 
 function Input() {
     const { addMessage, setMessageHistory } = useGeminiContext()
@@ -26,8 +26,8 @@ function Input() {
         
         
         addMessage('ai', 'temp', 13340)
-        const answer = await runChat(prompt)
-        // const answer = await fetchGeminiPro(prompt)
+        // const answer = await runChat(prompt)
+        const answer = await fetchGeminiPro(prompt)
         let resArray = answer.split('**')
         let boldAnswer = ''
 
@@ -42,15 +42,27 @@ function Input() {
 
         let breakAnswer = boldAnswer.split('*').join('')
 
-        let finalAnswer = extractTextWithinTripleQuotes(breakAnswer)
-        console.log('final', finalAnswer)
-        finalAnswer = '<p class="code">' + finalAnswer + '</p>'
+        let codeAnswer = extractTextWithinTripleQuotes(breakAnswer)
+        console.log('final', codeAnswer)
 
-        breakAnswer = breakAnswer.replace(/```(.*?)```/gs, finalAnswer)
+        let codeStyleAnswer = []
+        
+        for(let i = 0; i < codeAnswer.length; i++) 
+            codeStyleAnswer.push('<p class="code">' + codeAnswer[i] + '</p>')
+
+        // finalAnswer = '<p class="code">' + finalAnswer + '</p>'
+
+        let regex = /```[\s\S]*?```/g;
+
+        // Replace code blocks with corresponding content from data array
+        let finalAnswer = breakAnswer.replace(regex, () => {
+            return codeStyleAnswer.shift() || '' // Shift the first element from data array or empty string if array is empty
+        })
+        // breakAnswer = breakAnswer.replace(/```(.*?)```/gs, codeStyleAnswer)
 
         const id = crypto.randomUUID()
 
-        addMessage('ai', breakAnswer, id)
+        addMessage('ai', finalAnswer, id)
 
         setDisabled(prev => !prev)
         setPrompt('')
