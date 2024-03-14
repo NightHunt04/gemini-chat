@@ -7,26 +7,6 @@ function DisplayChat() {
     const { messageHistory } = useGeminiContext()
     const [speak, setSpeak] = useState(false)
 
-    const speakText = (text) => {
-        setSpeak(true)
-
-        let cleanText = text.replace(/<[^>]*>/g, '')
-        cleanText = cleanText.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, '')
-        axios.post('/speak', { text : cleanText })
-        .then(response => {
-            console.log(response)
-        })
-        .catch(err => console.log(err))
-    }
-
-    const stopSpeakText = () => {
-        setSpeak(false)
-
-        axios.post('/speak', { text : 'okdok' })
-        .then(response => console.log(response))
-        .catch(err => console.log(err))
-    }
-
     return (
         <div className="w-full pt-3 flex items-center justify-center pb-28 md:pb-32 overflow-y-auto">
             <div className="relative w-full mx-2 my-6 lg:w-[900px] md:w-[700px] sm:w-[600px] flex flex-col items-start justify-start bg-transparent text-[14px] md:text-[17px]">
@@ -52,7 +32,7 @@ function DisplayChat() {
                                         <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" className="inline w-full h-full m-5" alt="" />
                                     </div>
                                     <div>
-                                        <p className="text-gray-300 whitespace-pre-line text-[15px] md:text-[18px] leading-[1.36rem]" dangerouslySetInnerHTML={{__html: message['text']}}/>
+                                        <p className="text-gray-300 whitespace-pre-line text-[15px] md:text-[18px] pt-1 leading-[1.36rem]" dangerouslySetInnerHTML={{__html: message['text']}}/>
                                     </div>
                                 </div>
                             )
@@ -60,7 +40,7 @@ function DisplayChat() {
                         else if(message['id'] === 13340) {
                             return (
                                 <div key={message['id']} className="relative bottom-up-ans w-full flex items-start justify-start gap-3 pb-6 md:py-3 md:pb-9">
-                                    <div className="text-lg md:text-10xl w-[1.9rem] h-[1.9rem] flex items-center justify-center">
+                                    <div className="text-[16px] md:text-10xl w-[1.6rem] h-[1.9rem] flex items-center justify-center">
                                         <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" className="animate-spin-slow inline w-full h-full m-5" alt="" />
                                     </div>
                                     <div>

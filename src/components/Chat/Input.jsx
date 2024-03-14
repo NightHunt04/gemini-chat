@@ -57,7 +57,7 @@ function Input() {
     }
 
     return (
-        <div className="fixed flex items-center justify-center w-full bottom-16 bg-transparent">
+        <div className="fixed flex items-center justify-center w-full bottom-[30px] bg-transparent">
             <input 
                 type="text" 
                 placeholder="Enter a prompt here"
