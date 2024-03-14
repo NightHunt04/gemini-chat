@@ -67,18 +67,19 @@ function Input() {
     }
 
     return (
-        <div className="fixed flex items-center justify-center w-full bottom-[30px] bg-transparent">
+        <div className="fixed flex items-center justify-center w-full bg-transparent bottom-[30px] px-3">
             <input 
                 type="text" 
                 placeholder="Enter a prompt here"
                 value={prompt}
                 disabled={disabled}
                 onChange={e => setPrompt(e.target.value)}
-                className={`rounded-2xl outline-none shadow-xl w-[350px] md:w-4/12 text-gray-200 bg-slate-800 px-5 py-2 md:py-3 text-[15px] md:text-lg ${disabled ? 'bg-slate-500' : ''}`}
+                className={`rounded-l-2xl outline-none shadow-xl w-[350px] md:w-4/12 text-gray-200 bg-slate-800 px-5 py-2 md:py-3 text-[15px] md:text-lg ${disabled ? 'bg-slate-500' : ''}`}
                 onKeyDown={e => {
                     if(e.key === 'Enter')
                         handleInputPrompt()  
                 }}/>
+            <i className="rounded-r-2xl bg-slate-800 px-5 py-4 icon major fa fa-paper-plane text-gray-300 text-[16px] md:text-[20px] hover:cursor-pointer"></i>  
         </div>
     )
 }
