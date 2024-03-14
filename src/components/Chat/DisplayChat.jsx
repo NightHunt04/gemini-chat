@@ -29,7 +29,7 @@ function DisplayChat() {
 
     return (
         <div className="w-full pt-3 flex items-center justify-center pb-28 md:pb-32 overflow-y-auto">
-            <div className="relative w-full mx-5 my-6 lg:w-[900px] md:w-[700px] sm:w-[600px] flex flex-col items-start justify-start bg-transparent text-[14px] md:text-[17px]">
+            <div className="relative w-full mx-2 my-6 lg:w-[900px] md:w-[700px] sm:w-[600px] flex flex-col items-start justify-start bg-transparent text-[14px] md:text-[17px]">
                 {
                     (messageHistory.length > 0) ?
                     messageHistory.map(message => {
