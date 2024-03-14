@@ -79,7 +79,7 @@ function Input() {
                     if(e.key === 'Enter')
                         handleInputPrompt()  
                 }}/>
-            <i className="rounded-r-2xl bg-slate-800 px-5 py-4 icon major fa fa-paper-plane text-gray-300 text-[16px] md:text-[20px] hover:cursor-pointer"></i>  
+            <i onClick={handleInputPrompt} className="rounded-r-2xl bg-slate-800 px-5 py-4 icon major fa fa-paper-plane text-gray-300 text-[16px] md:text-[20px] hover:cursor-pointer"></i>  
         </div>
     )
 }
