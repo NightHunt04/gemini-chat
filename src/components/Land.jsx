@@ -22,7 +22,7 @@ function Land() {
             </p>
 
             <div className="relative flex flex-col md:flex-row lg:flex-row items-center gap-2 lg:gap-7 md:gap-3 sm:gap-4 p-2 lg:p-5 lg:mt-[60px] md:p-2 md:mt-[40px] justify-start">
-                <div className="w-full h-[490px] mt-10 lg:w-[500px] lg:h-[700px] md:w-[350px] md:h-[520px] overflow-hidden rounded-xl bg-gradient-to-r from-[#d8b4fe] to-[#93c5fd] p-px opacity-85 hover:cursor-pointer shadow-lg hover:shadow-lg hover:shadow-[#93c5fd] transition duration-[0.6s]" onClick={e => navigate('/chat')}>
+                <div className="w-full h-[506px] mt-10 lg:w-[500px] lg:h-[700px] md:w-[350px] md:h-[520px] overflow-hidden rounded-xl bg-gradient-to-r from-[#d8b4fe] to-[#93c5fd] p-px opacity-85 hover:cursor-pointer shadow-lg hover:shadow-lg hover:shadow-[#93c5fd] transition duration-[0.6s]" onClick={e => navigate('/chat')}>
                     <div className='w-full h-full p-6 sm:p-7 rounded-[calc(0.75rem-1px)] bg-slate-950'>
                         <h3 className="text-[16px] lg:text-[23px] md:text-[17px] sm:text-[15px]"><span className="bg-gradient-to-r from-purple-300 to-blue-300 text-transparent bg-clip-text">Gemini </span>Pro</h3>
                         <p className="text-[13px] lg:text-[17px] md:text-[15px] sm:text-[15px]">Your Conversational Companion</p>
@@ -31,7 +31,7 @@ function Land() {
                         <p className="text-[14px] lg:text-[17px] md:text-[13px] sm:text-[13px] lg:p-1 md:p-1">Chat Gemini can translate languages and understand diverse communication styles, fostering connection across borders.</p>
                     </div>
                 </div>
-                <div className="w-full h-[490px] mt-10 lg:w-[500px] lg:h-[700px] md:w-[350px] md:h-[520px] overflow-hidden rounded-xl bg-gradient-to-b from-[#d8b4fe] to-[#93c5fd] p-px opacity-85 hover:cursor-pointer shadow-lg hover:shadow-lg hover:shadow-[#d8b4fe] transition duration-[0.6s]">
+                <div className="w-full h-[506px] mt-10 lg:w-[500px] lg:h-[700px] md:w-[350px] md:h-[520px] overflow-hidden rounded-xl bg-gradient-to-b from-[#d8b4fe] to-[#93c5fd] p-px opacity-85 hover:cursor-pointer shadow-lg hover:shadow-lg hover:shadow-[#d8b4fe] transition duration-[0.6s]">
                     <div className='w-full h-full p-6 sm:p-7 rounded-[calc(0.75rem-1px)] bg-slate-950'>
                         <h3 className="text-[16px] lg:text-[23px] md:text-[17px] sm:text-[15px]"><span className="bg-gradient-to-r from-purple-300 to-blue-300 text-transparent bg-clip-text">Gemini Vision </span>Pro</h3>
                         <p className="text-[13px] lg:text-[17px] md:text-[15px] sm:text-[15px]">See the World Through New Eyes</p>
